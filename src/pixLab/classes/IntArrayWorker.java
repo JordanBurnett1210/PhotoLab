@@ -99,5 +99,25 @@ public class IntArrayWorker
       }
     }
   }
+  
+  /**
+   * Get the number of times an integer value is found in the matrix.
+   */
+  public int getCount(int num)
+  {
+	int total = 0;
+			 
+	for (int row = 0; row < matrix.length; row++)
+	{
+		for(int col = 0; col < matrix[0].length; col++)
+		{
+			if(num == matrix[row][col])
+			{
+				total++;
+			}
+		}
+	}
+	return total;
+  }
  
 }
