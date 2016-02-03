@@ -119,5 +119,38 @@ public class IntArrayWorker
 	}
 	return total;
   }
+  
+  public int getLargest()
+  {
+	  int large = Integer.MIN_VALUE;
+	  
+	  for(int row = 0; row < matrix.length; row++)
+	  {
+		  for(int col = 0; col < matrix[0].length; col ++)
+		  {
+			  if(large < matrix[row][col])
+			  {
+				  large = matrix[row][col];
+			  }
+		  }
+	  }
+	  
+	  return large;
+  }
+  
+  public int getColTotal()
+  {
+	  int total = 0;
+	  
+	  for(int row = 0; row < matrix.length; row++)
+	  {
+		  for(int col = 0; col < matrix[0].length; col ++)
+		  {
+			  total = total + matrix[row][col];
+		  }
+	  }
+			  
+	  return total;
+  }
  
 }
